@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="rols : An R interface to EBI's Ontology Lookup Service." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>rols</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/lgatto/rols">View on GitHub</a>
+
+          <h1 id="project_title">rols</h1>
+          <h2 id="project_tagline">An R interface to EBI's Ontology Lookup Service.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/lgatto/rols/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/lgatto/rols/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>The Ontology Lookup Service</h3>
+
+<p>The <a href="http://www.ebi.ac.uk/ontology-lookup/">Ontology Lookup Service</a> (OLS), developed at the <a href="http://www.ebi.ac.uk/">European Bioinformatics Institute</a> (EBI), is a unified web interface to query multiple ontologies from a single location. It also provides Simple Object Access Protocol (SOAP) webservice for programmatic access.</p>
+
+<h3>The <code>rols</code> R package</h3>
+
+<p>The <code>rols</code> package uses functionality from the <a href="http://www.omegahat.org/SSOAP/">SSOAP</a> and <a href="http://www.omegahat.org/XMLSchema/">XMLSchema</a> packages to query the OLS directly from R. It also uses some functionality from the <a href="http://bioconductor.org/packages/release/bioc/html/Biobase.html">Biobase</a> package.</p>
+
+<h3>The <code>CVParam</code> class</h3>
+
+<p>The <code>CVParam</code> S4 class allows to generate controlled vocabulary parameters for all 88 ontologies through the OLS, as used in the frame of the <a href="http://www.psidev.info/">Proteomics Standards Initiative</a> (PSI) effort. </p>
+
+<h3>Installation</h3>
+
+<p><code>rols</code> is available from the <a href="http://www.bioconductor.org">Bioconductor</a> repository. The package and its dependencies can be installed </p>
+
+<pre><code>source("http://www.bioconductor.org/biocLite.R")
+biocLite("rols")
+</code></pre>
+
+<p>See also the <code>rols</code> <a href="http://bioconductor.org/packages/2.11/bioc/html/rols.html">Bioconductor page</a> for on-line access to the vignette and the reference manual.</p>
+
+<p>The code on <a href="https://github.com/lgatto/rols">github</a> is for sharing, testing, issue tracking and forking/pulling purposes. The <strong>official source code</strong> is available from the <a href="https://hedgehog.fhcrc.org/bioconductor/trunk/madman/Rpacks/">Bioconductor svn server</a>. Get is with </p>
+
+<pre><code>svn co https://hedgehog.fhcrc.org/bioconductor/trunk/madman/Rpacks/rols
+</code></pre>
+
+<p>(user name: <code>readonly</code>, password: <code>readonly</code>)</p>
+
+<h3>Help</h3>
+
+<p><code>rols</code> comes with plenty of documentation. Have a start with the vignette <code>vignette("rols", package="rols")</code>. Do not hesitate to contact me for questions/comments/suggestions.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">rols maintained by <a href="https://github.com/lgatto">lgatto</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-31623715-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
