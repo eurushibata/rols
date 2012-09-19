@@ -63,6 +63,20 @@ biocLite("rols")
 <h3>Help</h3>
 
 <p><code>rols</code> comes with plenty of documentation. Have a start with the vignette <code>vignette("rols", package="rols")</code>. Do not hesitate to contact me for questions/comments/suggestions.</p>
+
+<h3>Building from source</h3>
+
+<p>Some of the functions in rols are documented with the <a href="https://github.com/klutometis/roxygen">roxygen2</a>
+(<a href="http://cran.r-project.org/web/packages/roxygen2/index.html">CRAN package</a>). 
+The respective Rd pages have been created with</p>
+
+<pre><code>R --vanilla -e "library(roxygen2); roxygenize('"$(PKG)"', roclets=\"rd\")";
+</code></pre>
+
+<p>Note that only the <code>rd</code> roclet has been used, i.e. only <code>roxygen</code>'s Rd-generation 
+functionality. <code>roxygen</code> can also generate the NAMESPACE (<code>namespace</code> roclet) and 
+parts of (?) the DESCRIPTION (previous and <code>collate</code> roclet) files, which is not used here. 
+If all roclets are used, some original data will be overwritten.</p>
       </section>
     </div>
 
