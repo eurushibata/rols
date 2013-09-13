@@ -443,32 +443,32 @@ childrenRelations <- function(termId = termId,
 ## ## public Map getTermChildren(String termId, String ontologyName, int distance, int[] relationTypes)
 ## ## distance: the cutoff distance. if distance < 0, will return all children
 ## ## raltionTypes: the types of relation between the terms ...
-## children <- function(termId = termId,
-##                      ontologyName = ontologyName,
-##                      distance = 1,  ## NULL: all children or numeric to get tems <= distance 
-##                      realtionTypes, ## NULL: all types, other? 1: is_a, 2:part_if, 3: both
-##                      simplify=TRUE) {
-##   if (missing(ontologyName))
-##     stop("Specify an ontology name.")
-##   ontologyName <- match.arg(ontologyName, ontologyNames())
-##   if (missing(relationTypes)) {
-##     relationTypes <- 3
-##   } else {
-##     relationTypes <- switch(relationTypes,
-##                            "is_a" = 1,
-##                            "part_of" = 2)
-##     if (is.null(relationTypes))
-##       stop("If specified, 'relationTypes' must be 'part_of' or 'is_a'.")           
-##   }
-##   xx <- getTermChildren(termId = termId,
-##                         ontologyName = ontologyName,
-##                         distance = distance,
-##                         relationTypes = relationTypes)
-##   ans <- map(xx)
-##   if (simplify) 
-##     ans <- as(ans, "character")
-##   return(ans) 
-## }
+children <- function(termId = termId,
+                     ontologyName = ontologyName,
+                     distance = 1,  ## NULL: all children or numeric to get tems <= distance 
+                     relationTypes, ## NULL: all types, other? 1: is_a, 2:part_if, 3: both
+                     simplify=TRUE) {
+  if (missing(ontologyName))
+    stop("Specify an ontology name.")
+  ontologyName <- match.arg(ontologyName, ontologyNames())
+  if (missing(relationTypes)) {
+    relationTypes <- 3
+  } else {
+    relationTypes <- switch(relationTypes,
+                           "is_a" = 1,
+                           "part_of" = 2)
+    if (is.null(relationTypes))
+      stop("If specified, 'relationTypes' must be 'part_of' or 'is_a'.")           
+  }
+  xx <- getTermChildren(termId = termId,
+                        ontologyName = ontologyName,
+                        distance = distance,
+                        relationTypes = relationTypes)
+  ans <- map(xx)
+  if (simplify) 
+    ans <- as(ans, "character")
+  return(ans) 
+}
 
 
 ## public Map getChildrenFromRoot(String RootTermId, String ontologyName, Vector childrenIds);
